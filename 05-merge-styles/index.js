@@ -24,19 +24,5 @@ function appendFiles (to, from) {
 }
 
 appendFiles (commonCssFile, folder);
-/*
-fs.readdir(folder, {withFileTypes: true}, (err, files) => {
-  if(err) throw err;
-  
-  const arrCssFiles = files.filter(file => path.parse( path.join(__dirname, 'styles' +`\\${file.name}`)).ext === '.css');
-    
-  arrCssFiles.forEach(item => {    
-    const readableStream = fs.createReadStream( path.join(__dirname, 'styles' +`\\${item.name}`));
 
-    readableStream.on('data', chunk => fs.appendFile(commonCssFile , chunk, (err) => {
-      if(err) throw err; 
-    }));
-    
-  });
-});*/
 
